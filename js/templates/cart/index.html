@@ -1,0 +1,48 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-12">
+
+    <h1>Your Shopping Cart</h1>
+
+    <div class="cart-wrapper">
+
+      <div class="cart" ng-if="cartItems.length">
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th>Remove?</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr ng-repeat="item in cartItems">
+              <td>{{ item.product.name }}</td>
+              <td>{{ item.product.price | currency }}</td>
+              <td>{{ item.product.category.name }}</td>
+              <td><input type="number" ng-model="item.quantity" min="1" class="product-quantity"></td>
+              <td>
+                <button class="btn btn-danger" ng-click="removeItem(item.product.id)">Remove</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button class="btn btn-primary pull-right" ng-click="updateCart()">
+          Update Cart
+        </button>
+
+      </div>
+
+      <h3 class="text-center" ng-if="cartItems.length === 0">
+        <em>Your cart is empty...</em>
+      </h3>
+
+    </div>
+
+</div>

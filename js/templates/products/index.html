@@ -22,7 +22,7 @@
   </div>
 
   <div class="row">
-    <product-index ng-repeat="product in products | filter: categoryFilter | limitTo: 6" product="product"></product-index>
+    <product-index ng-repeat="product in products | filter: categoryFilter | limitTo: 6" product="product" add-item="addItem(product)"></product-index>
   </div>
 
 </div>

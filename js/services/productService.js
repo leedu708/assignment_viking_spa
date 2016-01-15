@@ -25,7 +25,7 @@ vikingStore.factory('productService', function() {
     category_name = faker.commerce.department();
 
     // ensure unique category
-    check = jQuery.grep(productService.categories, function(category) {
+    check = $.grep(productService.categories, function(category) {
       return (category.name === category_name);
     });
 

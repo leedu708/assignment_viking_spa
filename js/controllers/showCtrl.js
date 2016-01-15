@@ -1,8 +1,18 @@
 vikingStore.controller('ShowCtrl', 
-  ['$scope', '$stateParams', 'productService', 'shoppingCart', 
-  function($scope, $stateParams, productService, shoppingCart) {
+  ['$scope', '$stateParams', '$rootScope', 'productService', 'shoppingCart', 
+  function($scope, $stateParams, $rootScope, productService, shoppingCart) {
 
-  $scope.product = productService.findProduct(Number($stateParams.id));
-  $scope.quantity = 1;
+  $rootScope.cartCount = function() {
+    return shoppingCart.count();
+  };
+
+  $scope.product_id = Number($stateParams.id);
+  $scope.product = productService.findProduct($scope.product_id);
+
+  $scope.quantity = shoppingCart.getQuantity($scope.product_id) || 1;
+
+  $scope.addItem = function() {
+    shoppingCart.addItem($scope.product, $scope.quantity);
+  };
 
 }]);
