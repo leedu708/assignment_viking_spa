@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-6">
+      <img src="images/product_placeholder.jpg" class="img-responsive">
+    </div>
+
+    <div class="col-xs-6">
+      <h2>{{ product.name }}</h2>
+      <h4>{{ product.category.name }}</h4>
+      <p>{{ product.price | currency }}</p>
+      <p>{{ product.description }}</p>
+
+      <form name="addQuantity">
+        <div class="form-group">
+          <label for="quantity">Quantity:</label>
+          <input type="number" name="quantity" min="1" ng-model="quantity" class="product-quantity">
+        </div>
+
+        <input type="submit" value="Add to Cart" class="btn btn-success btn-block">
+      </form>
+    </div>
+
+  </div>
+</div>

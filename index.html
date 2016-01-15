@@ -27,7 +27,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Viking Store</a>
+          <a class="navbar-brand" ui-sref="products.index">Viking Store</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -39,14 +39,6 @@
 
       </div>
     </nav>
-
-    <header class="jumbotron">
-      <div class="container">
-        <h1 class="text-center">The Viking Store</h1>
-        <h3 class="text-center">The Best Viking Gear on the Whole Web</h3>
-        <p class="text-center"><em>Choose from among our lineup of fine items below</em></p>
-      </div>
-    </header>
 
     <ui-view></ui-view>
 
@@ -63,9 +55,11 @@
 
   <!-- services -->
   <script src="js/services/productService.js"></script>
+  <script src="js/services/shoppingCart.js"></script>
 
   <!-- controllers -->
   <script src="js/controllers/productCtrl.js"></script>
+  <script src="js/controllers/showCtrl.js"></script>
 
   <!-- directives -->
   <script src="js/directives/productIndex.js"></script>
@@ -75,7 +69,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <!-- Faker -->
-  <script src="http://marak.com/faker.js/js/faker.js"></script>
+  <script src="js/libs/faker.js"></script>
 
   <!-- styles -->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
