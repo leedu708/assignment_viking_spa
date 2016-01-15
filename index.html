@@ -18,7 +18,7 @@
 
   <body ng-app="VikingStore">
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -40,7 +40,13 @@
       </div>
     </nav>
 
-    <ui-view></ui-view>
+    <div class="spacer"></div>
+
+    <div id="wrap">
+      <div id="main" class="clear-top">
+        <ui-view></ui-view>
+      </div>
+    </div>
 
     <footer class="text-center">
       <h5>Contact</h5>
