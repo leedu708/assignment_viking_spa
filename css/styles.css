@@ -56,3 +56,7 @@ footer {
 .spacer {
   margin-top: 50px;
 }
+
+.pointer {
+  cursor: pointer;
+}

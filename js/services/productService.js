@@ -20,8 +20,8 @@ vikingStore.factory('productService', function() {
   };
 
   productService.categories = [];
-  cat_id = 1;
-  while (cat_id < 9) {
+  cat_id = 0;
+  while (cat_id < 8) {
     category_name = faker.commerce.department();
 
     // ensure unique category
@@ -41,7 +41,7 @@ vikingStore.factory('productService', function() {
   };
 
   productService.products = [];
-  for (i = 1; i < 25; i++) {
+  for (i = 0; i < 24; i++) {
     var product = {
       id: i,
       name: faker.commerce.productName(),

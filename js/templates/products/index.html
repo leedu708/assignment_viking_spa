@@ -21,6 +21,13 @@
     </div>
   </div>
 
+<!--   <ul class="list-inline">
+    <li><a class="pointer" ng-click="pageDown()"> << </a></li>
+    <li><p>Page: {{ page.number }}</p></li>
+    <li><a class="pointer" ng-click="pageUp()"> >> </a></li>
+    <li>{{ page.offset() }}
+  </ul> -->
+
   <div class="row">
     <product-index ng-repeat="product in products | filter: categoryFilter | limitTo: 6" product="product" add-item="addItem(product)"></product-index>
   </div>
