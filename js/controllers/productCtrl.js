@@ -11,7 +11,7 @@ vikingStore.controller('ProductCtrl',
 
   $scope.page = {
     number: 1,
-    perPage: 3,
+    perPage: 6,
     offset: function() { return (this.number - 1) * this.perPage }
   };
 
